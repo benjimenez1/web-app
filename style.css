@@ -6,13 +6,13 @@ html, body{
     text-align:center;
 }
 .triangle-down {
-    display:inline-block;
 	width: 0;
 	height: 0;
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-top: 200px solid #0528F2;
     margin-top: 100px;
+    margin-left: 145px;
 }
 .ball{
     display: inline-block;
@@ -25,10 +25,13 @@ html, body{
     display:inline-block;
     text-align: center;
     position: relative;
-    right:304px;
-    bottom: 115px;
+    right:5px;
+    bottom: 150px;
     width:100px;
     height:100px;
     color:#F2F2F2;
     font-family: sans-serif;
+}
+.magic-eight-ball{
+    position: absolute;
 }
