@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const timeDiff = (currentTime - prevTime) / 1000; // convert to seconds
       const speed = distance / timeDiff;
       console.log(`Speed: ${speed.toFixed(2)} px/s`);
-      if (speed >= 80) {
+      if (speed >= 85) {
         const messages = [
           "Ask Again Later",
           "It is certain",
@@ -81,5 +81,33 @@ document.addEventListener('DOMContentLoaded', () => {
       prevPosition = currentPosition;
       prevTime = currentTime;
     }, 1000);
-  });
-  
+});
+//spash screen
+let intro = document.querySelector('.intro');
+let logo = document.querySelector('.logo-header');
+let logoSpan = document.querySelectorAll('.logo');
+
+window.addEventListener('DOMContentLoaded', () =>{
+  setTimeout(()=>{
+
+    logoSpan.forEach((span, idx)=>{
+      setTimeout(()=>{
+        span.classList.add('active');
+      }, (idx + 1) * 400)
+    });
+
+    setTimeout(()=>{
+      logoSpan.forEach((span, idx)=>{
+        setTimeout(()=>{
+          span.classList.remove('active');
+          span.classList.add('fade');
+        }, (idx + 1) * 50)
+      })
+    },2000);
+
+    setTimeout(()=>{
+      intro.style.top = '-100vh';
+    }, 2300)
+  })
+
+})

@@ -1,9 +1,11 @@
 html, body{
     height:100%;
+    width:100%;
     margin:0;
     padding:0;
     background-color: #F2F2F2;
     text-align:center;
+    align-items: center;
 }
 .triangle-down {
 	width: 0;
@@ -35,7 +37,47 @@ html, body{
     position: absolute;
 }
 .move-area{
-    height:883;
-    width:auto;
+    height:100%;
+    width:100%;
+    position:relative;
+    display: flex;
     align-items: center;
+}
+/* splash screen */
+.intro{
+    position:fixed;
+    z-index: 1;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.logo{
+    position: relative;
+    display:inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade{
+    bottom:150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
 }
